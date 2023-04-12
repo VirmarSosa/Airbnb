@@ -28,11 +28,7 @@ def welcome():
         "We Currently Offer Data On Over 20k Airbnbs In Melbourne <br/>"
         "Available Routes:<br/>"
         "/api/v1.0/GeoJson<br/>"
-        "/api/v1.0/players<br/>"
-        "/api/v1.0/teams/name<br/>"
-        "/api/v1.0/players/name<br/>"
-        "<p> /team/'name' should be full name of desired team with '_' in spaces. For example new york giants =  New_York_Giants"
-        "<p> /players/'name' should be full name of player with spaces for example 'Saquon Barkley' "
+        
     )
 
 @app.route("/api/v1.0/GeoJson")
@@ -46,11 +42,11 @@ def all():
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [row.Longitude, row.Latitude]
+                "coordinates": [row.longitude, row.latitude]
             },
             "properties": {
-                "description": row.Description,
-                "host_name": row.Host_Name,
+                "description": row.description,
+                "host_name": row.host_name,
                 "index": row.index
             }
         }
