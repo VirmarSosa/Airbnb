@@ -3,7 +3,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.automap import automap_base
 from flask import Flask, jsonify, request
 
-engine = create_engine("sqlite:///Resources/airbnb_data.db")
+engine = create_engine("sqlite:///airbnb_data.db")
 metadata = MetaData()
 metadata.reflect(bind=engine)
 Base = automap_base()
