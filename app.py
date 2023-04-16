@@ -3,6 +3,8 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.automap import automap_base
 from flask import Flask, jsonify, request
 
+
+
 engine = create_engine("sqlite:///airbnb_data.db")
 metadata = MetaData()
 metadata.reflect(bind=engine)
@@ -17,6 +19,8 @@ Session = scoped_session(session_factory)
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
+
+
 @app.teardown_request
 def remove_session(*args):
     Session.remove()
@@ -29,7 +33,6 @@ def welcome():
         "Available Routes:<br/>"
         "/api/v1.0/GeoJson<br/>"
         "/api/v1.0/available<br/>"
-        
     )
 
 @app.route("/api/v1.0/GeoJson")
@@ -47,7 +50,6 @@ def all():
             },
             "properties": {
                 "id": row.id,
-                "description": row.description,
                 "neighborhood_overview": row.neighborhood_overview,
                 "host_name": row.host_name,
                 "host_since": row.host_since,
@@ -91,6 +93,7 @@ def all():
         features["features"].append(feature)
     return jsonify(features)
 
+
 @app.route("/api/v1.0/available")
 def available():
     result = []
@@ -110,18 +113,5 @@ def available():
     return jsonify(result)
 
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
-# from flask import Flask, render_template
-# from flask_sqlalchemy import SQLAlchemy
-
-# app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///airbnb_data.db'
-# db = SQLAlchemy(app)
-
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
