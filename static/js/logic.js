@@ -8,7 +8,11 @@ var tileLayer = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.p
   attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © <a href="https://hot.openstreetmap.org">Humanitarian OpenStreetMap Team</a>'
 }).addTo(map);
 
+<<<<<<< HEAD
 d3.json("Data/airbnb_melbourne.geojson").then(function(data) {
+=======
+d3.json("https://github.com/sonila15/Airbnb-Melbourne/blob/Sonila/Data/airbnb_melbourne.geojson").then(function(data) {
+>>>>>>> 98cdca395618fa07f95ad6da0b68b159b26d7cf8
 
     var markers = L.layerGroup();
   
