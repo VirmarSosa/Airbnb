@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, Table, MetaData, func
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.automap import automap_base
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 
 
@@ -18,7 +19,7 @@ Session = scoped_session(session_factory)
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
-
+CORS(app)
 
 
 @app.teardown_request

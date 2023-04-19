@@ -1,9 +1,1 @@
-let airbnb_data = d3.json("../../../Data/airbnb_melbourne.geojson")
-  .then(function(data) {
-    // Do something with the data
-    console.log(data);
-  })
-  .catch(function(error) {
-    // Handle any errors
-    console.error(error);
-  });
+let queryurl = "https://gist.githubusercontent.com/jayfabs/dd989456f1279747184fe921d3287044/raw/e97d8207dbcde0e3a7678055717163e0834b58cc/airbnb_melbourne"
