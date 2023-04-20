@@ -10,14 +10,14 @@ The dataset for this project is the Melbourne Airbnb Analysis and it was obtaine
 
 ## Technologies used
 
-Pandas
-Numpy
-Leaflet
-HTML
-JavaScript
-Geopandas
-SQLite3
-Shapely.geometry
++Pandas
++Numpy
++Leaflet
++HTML
++JavaScript
++Geopandas
++SQLite3
++Shapely.geometry
 
 ## Process
 
