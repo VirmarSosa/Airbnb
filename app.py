@@ -31,7 +31,7 @@ def remove_session(*args):
 @app.route("/")
 def welcome():
     return (
-        "Welcome To The Mealbourne Airbnb Data API<br/>"
+        "Welcome To The Melbourne Airbnb Data API<br/>"
         "We Currently Offer Data On Over 2k Airbnbs In Melbourne, Austrialia <br/>"
          "<br/>"
         "To view webpage use the /map route!  <br/>"
