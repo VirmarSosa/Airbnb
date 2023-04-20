@@ -1,7 +1,12 @@
 from sqlalchemy import create_engine, Table, MetaData, func
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.automap import automap_base
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
+import json
+#from flask_cors import CORS
+import os
+
+print(os.getcwd())
 
 engine = create_engine("sqlite:///airbnb_data.db")
 metadata = MetaData()
@@ -14,8 +19,10 @@ airbnb = Base.classes.airbnb_clean
 session_factory = sessionmaker(bind=engine)
 Session = scoped_session(session_factory)
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.getcwd())
 app.config['JSON_SORT_KEYS'] = False
+#CORS(app)
+
 
 @app.teardown_request
 def remove_session(*args):
@@ -29,7 +36,6 @@ def welcome():
         "Available Routes:<br/>"
         "/api/v1.0/GeoJson<br/>"
         "/api/v1.0/available<br/>"
-        
     )
 
 @app.route("/api/v1.0/GeoJson")
@@ -47,7 +53,6 @@ def all():
             },
             "properties": {
                 "id": row.id,
-                "description": row.description,
                 "neighborhood_overview": row.neighborhood_overview,
                 "host_name": row.host_name,
                 "host_since": row.host_since,
@@ -91,6 +96,7 @@ def all():
         features["features"].append(feature)
     return jsonify(features)
 
+
 @app.route("/api/v1.0/available")
 def available():
     result = []
@@ -108,6 +114,19 @@ def available():
                 "instant_bookable":row.instant_bookable
             })
     return jsonify(result)
+
+
+@app.route("/any")
+def any():
+    return render_template('index.html')
+    # just be aware that above with the app the following 'template folder needs to be added"
+    #app = Flask(__name__, template_folder=os.getcwd())
+
+@app.route('/map')
+def map():
+    with open('Data/airbnb_melbourne.geojson', 'r') as f:
+        data = json.load(f)
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
