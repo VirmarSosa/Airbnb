@@ -123,12 +123,6 @@ def available():
     return jsonify(result)
 
 
-@app.route("/any")
-def any():
-    return render_template('index.html')
-    # just be aware that above with the app the following 'template folder needs to be added"
-    #app = Flask(__name__, template_folder=os.getcwd())
-
 @app.route('/map')
 def map():
     with open('Data/airbnb_melbourne.geojson', 'r') as f:
