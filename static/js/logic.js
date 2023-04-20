@@ -62,7 +62,7 @@ d3.json(queryurl).then(function(data) {
                          "<b>Review Rating: </b>" + feature.properties.review_scores_rating;
 
       var marker = L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-        radius: feature.properties.review_scores_rating / 1.5,
+        radius: feature.properties.review_scores_rating / 1,
         fillColor: color,
         fillOpacity: 0.8,
         color: "#fff",
@@ -264,7 +264,7 @@ d3.json(queryurl).then(function(data) {
     datasets: [{
       label: "Is Superhost?",
       data: Object.values(counts),
-      backgroundColor: ["#009688", "#65c3ba"],
+      backgroundColor: ["#FFB300", "#65C3BA"],
     }]
   };
   
