@@ -23,7 +23,6 @@ The analysis was conducted using the following technologies:
 - SQLite3
 - Shapely.geometry
 - Chart.js
-Pandas and Numpy were used for data cleaning and exploratory analysis, Leaflet and JavaScript were used to create interactive maps, Geopandas and Shapely.geometry were used for spatial analysis, and SQLite3 was used for database management.
 
 ## Running the Code
 To run the code, please follow these steps:
