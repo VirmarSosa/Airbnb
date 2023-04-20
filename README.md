@@ -30,7 +30,8 @@ To run the code, please follow these steps:
 Install the required dependencies using pip install.
 - Clone the repository.
 - Open the Jupyter Notebook "Data_Cleaning.ipynb" and run the code to clean and explore the data.
-- Run the Python script "bnb_geojson.py" to save the cleaned data as a GeoJSON file and connect to an SQLite database.
+- Run the Python script "app.py" to show flask API with routes for GeoJson and our HTML page.
+- View the HTML page by running /map route in the flask app
 
 ## Deployment
 The application is deployed on GitHub Pages at https://sonila15.github.io/Airbnb-Melbourne/. The source code is available in the repository at https://github.com/sonila15/Airbnb-Melbourne.
