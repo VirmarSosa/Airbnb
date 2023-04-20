@@ -1,42 +1,35 @@
 # Airbnb-Melbourne
+## Objective
+The objective of this analysis is to better understand the impact of Airbnb's listings in Melbourne, Australia neighborhoods and cities using data collected by Inside Airbnb.
 
-## Introduction
+## Analysis Summary
+The analysis involves cleaning and exploring the Melbourne Airbnb dataset to gain insights into the growth, reputation, and pricing of the Airbnb market in Melbourne. Key findings include the growth of the Airbnb market in Melbourne over time, positive correlation between the number of reviews and review scores, the prevalence of "Superhost" status among Melbourne hosts, and insights into the average price per night for Airbnb listings in different Melbourne neighborhoods.
 
-This repo contains the analysis of Melbourne Australia’s listings data collected by Inside Airbnb to better understand the impact of Airbnb’s listings in neighborhoods and cities. 
+## Data Summary
+The dataset for this project is the Melbourne Airbnb Analysis and it was obtained from the Kaggle dataset (http://insideairbnb.com/melbourne). The dataset describes the listing activity of homestays in Melbourne which was compiled in 2019-2020. The dataset has X number of observations and Y number of variables.
 
-## Source
+## Technologies Used
+The analysis was conducted using the following technologies:
 
-The dataset for this project is the Melbourne Airbnb Analysis and it was obtained from the Kaggle dataset (http://insideairbnb.com/melbourne). This dataset describes the listing activity of homestays in Melbourne which was compiled in 2019-2020. 
+- Pandas
+- Numpy
+- Leaflet
+- HTML
+- JavaScript
+- Geopandas
+- SQLite3
+- Shapely.geometry
+- Chart.js
+Pandas and Numpy were used for data cleaning and exploratory analysis, Leaflet and JavaScript were used to create interactive maps, Geopandas and Shapely.geometry were used for spatial analysis, and SQLite3 was used for database management.
 
-## Technologies used
+## Running the Code
+To run the code, please follow these steps:
 
-+ Pandas
-+ Numpy
-+ Leaflet
-+ HTML
-+ JavaScript
-+ Geopandas
-+ SQLite3
-+ Shapely.geometry
-
-## Process
-
-Using the data and working in Jupyter Notebook, we performed the required cleaning for the data, and conducted/created an exploratory analysis with supporting visualizations. The initial data review/cleaning and general exploratory analysis can be found in the file named “Data_Cleaning.ipynb.” Cleaned data was saved from this notebook into a file we named "data_clean_bnb.csv". This Python script processes Airbnb rental data and saves it as a GeoJSON file. It connects to an SQLite database, writes the data frame to a new table named "airbnb_clean", and then closes the database connection. The resulting data can be used for further analysis or visualization of Airbnb rental locations. 
+Install the required dependencies using pip install.
+- Clone the repository.
+- Open the Jupyter Notebook "Data_Cleaning.ipynb" and run the code to clean and explore the data.
+- Run the Python script "bnb_geojson.py" to save the cleaned data as a GeoJSON file and connect to an SQLite database.
 
 ## Deployment
-
 The application is deployed on GitHub Pages at https://sonila15.github.io/Airbnb-Melbourne/. The source code is available in the repository at https://github.com/sonila15/Airbnb-Melbourne.
-
-## Analysis
-
-- The first chart shows the growth of the Airbnb market in Melbourne over time, providing valuable information for pricing and marketing strategies for hosts.
-
-- The second chart indicates a positive correlation between the number of reviews and review scores, which can be used to improve a listing's reputation and attract more guests.
-
-- The third chart highlights the prevalence of "Superhost" status among Melbourne hosts, which can be used to increase visibility and credibility on the platform.
-
-- The fourth chart provides insights into the average price per night for Airbnb listings in different Melbourne neighborhoods, helping travelers and hosts make informed decisions about where to stay or list a property.
-
-Overall, these charts provide valuable insights into the growth, reputation, and pricing of the Airbnb market in Melbourne and can be used to inform pricing and marketing strategies for hosts and help travelers make informed decisions about where to stay.
-
 
