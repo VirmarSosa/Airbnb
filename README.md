@@ -26,3 +26,17 @@ Using the data and working in Jupyter Notebook, we performed the required cleani
 ## Deployment
 
 The application is deployed on GitHub Pages at https://sonila15.github.io/Airbnb-Melbourne/. The source code is available in the repository at https://github.com/sonila15/Airbnb-Melbourne.
+
+## Analysis
+
+- The first chart shows the growth of the Airbnb market in Melbourne over time, providing valuable information for pricing and marketing strategies for hosts.
+
+- The second chart indicates a positive correlation between the number of reviews and review scores, which can be used to improve a listing's reputation and attract more guests.
+
+- The third chart highlights the prevalence of "Superhost" status among Melbourne hosts, which can be used to increase visibility and credibility on the platform.
+
+- The fourth chart provides insights into the average price per night for Airbnb listings in different Melbourne neighborhoods, helping travelers and hosts make informed decisions about where to stay or list a property.
+
+Overall, these charts provide valuable insights into the growth, reputation, and pricing of the Airbnb market in Melbourne and can be used to inform pricing and marketing strategies for hosts and help travelers make informed decisions about where to stay.
+
+
