@@ -34,5 +34,7 @@ Install the required dependencies using pip install.
 - View the HTML page by running /map route in the flask app
 
 ## Deployment
-The application is deployed on GitHub Pages at https://sonila15.github.io/Airbnb-Melbourne/. The source code is available in the repository at https://github.com/sonila15/Airbnb-Melbourne.
+The application is deployed on GitHub Pages at https://sonila15.github.io/Airbnb-Melbourne/ 
+
+The source code is available in the repository at https://github.com/sonila15/Airbnb-Melbourne
 
